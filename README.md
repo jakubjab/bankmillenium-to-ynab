@@ -10,5 +10,5 @@ Output format is:
 
 To convert input CSV to UTF-8 and to YNAB format:
 ```
-iconv -f WINDOWS-1250 -t UTF8 input.csv | ./convert.awk > output.csv
+sed 's/\xC2\xA0/ /g' < input.csv | ./convert.awk > output.csv
 ```
