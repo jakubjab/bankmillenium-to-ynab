@@ -1,6 +1,6 @@
-# Convert CSV file exported from Credit Agricole Bank Polska to YNAB format
+# Convert CSV file exported from Bank Millenium S.A. to YNAB format
 
-Convert CSV file exported from Credit Agricole Bank Polska to YNAB format.
+Convert CSV file exported from Bank Millenium S.A. to YNAB format.
 
 Output format is:
 ```
