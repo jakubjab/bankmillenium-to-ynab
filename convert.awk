@@ -9,11 +9,16 @@ BEGIN {
     FS = "\""
     print "\"Date\",\"Payee\",\"Memo\",\"Amount\""
 }
+
 {
     TransactionDate = $4
     Payee = $14
     Memo = $8
     Amount = $16$18
 
-    print quote(TransactionDate)","quote(Payee)","quote(Memo)","quote(Amount)
+    sub(/\./, ",", Amount)
+
+    if (NR > 1) {
+        print quote(TransactionDate)","quote(Payee)","quote(Memo)","quote(Amount)
+    }
 }
